@@ -1,3 +1,4 @@
+var Libro = require('./modelo/libro');
 var Persona = require('./modelo/persona');
 var Controller = require ('./controller');
 
@@ -15,4 +16,10 @@ module.exports = function(app) {
 	app.get('*', function(req, res) {
 		res.sendfile('./angular/index.html'); // Carga única de la vista
 	});
+
+	
+	app.get('/api/libro', Controller.getLibro);
+	app.post('/api/libro', Controller.setLibro);
+	app.put('/api/libro/:libro_id', Controller.updateLibro);
+	app.delete('/api/libro/:libro_id', Controller.removeLibro);
 };
