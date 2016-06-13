@@ -1,13 +1,13 @@
 var mongoose = require('mongoose');
 
 module.exports = mongoose.model('Libro', {
-	isbn:int,
+	isbn:Number,
 	nombre: String,
-	preciolocal:float,
+	preciolocal:Number,
 	autor:String,
 	//portada:??
 	editorial:String,
-	ranking:float,
+	ranking:Number,
 	genero:String,
-	paginas:int
+	paginas:Number,
 });
