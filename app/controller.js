@@ -1,4 +1,4 @@
-var Persona = require('./modelo/persona');
+/*var Persona = require('./modelo/persona');
 // Obtiene todos los objetos Persona de la base de datos
 module.exports.getPersona = function (req, res){
 	Persona.find(
@@ -56,7 +56,7 @@ module.exports.removePersona = function(req, res) {
 		});
 }
 
-
+*/
 //PARTE DE LIBRO
 var Libro = require('./modelo/libro');
 

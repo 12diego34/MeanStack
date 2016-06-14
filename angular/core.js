@@ -1,5 +1,5 @@
 angular.module('MainApp', [])
-
+/*
 function mainController($scope, $http) {
 	$scope.newPersona = {};
 	$scope.personas = {};
@@ -58,7 +58,7 @@ function mainController($scope, $http) {
 		console.log($scope.newPersona, $scope.selected);
 	};
 }
-
+*/
 function libroController($scope, $http) {
 	$scope.newLibro = {};
 	$scope.libros = {};
