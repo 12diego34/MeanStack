@@ -1,11 +1,9 @@
 // Inicialización
-var libro = require('./libro')
 var express  = require('express');
 var app      = express(); 					// Utilizamos express
 var mongoose = require('mongoose'); 				// mongoose para mongodb
 var port  	 = process.env.PORT || 8080; 			
 
-var libros = require('./app/libros');
 // Configuracion
 mongoose.connect('mongodb://localhost:27017/MeanExample'); 	// Hacemos la conexión a la base de datos de Mongo con nombre "MeanExample"
 
@@ -18,9 +16,6 @@ app.configure(function() {
 
 // Cargamos los endpoints
 require('./app/routes.js')(app);
-
-app.use('/', app);
-app.use('/libros', libros);
 
 // Cogemos el puerto para escuchar
 app.listen(port);
