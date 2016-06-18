@@ -7,8 +7,8 @@
   "dependencies": {
     "debug": "~2.2.0",
     "express": "~3.4.4",
+    "google-books-search": "^0.3.0",
     "jade": "~1.11.0",
-    "mongoose": "~3.6.2",
-    "google-books-search": "~0.3.0"
+    "mongoose": "~3.6.2"
   }
 }

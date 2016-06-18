@@ -46,27 +46,12 @@
 			<div class="col-sm-4 col-sm-offset-1 text-center">
 				<form name="myForm">
 					<div class="form-group">
-						<input type="text" class="form-control input-lg text-center" placeholder="ISBN" ng-model="newLibro.isbn" required>
-						<br>
-						<input type="text" class="form-control input-lg text-center" placeholder="Nombre" ng-model="newLibro.nombre" required>
-						<br>
-						<input type="text" class="form-control input-lg text-center" placeholder="Precio" ng-model="newLibro.preciolocal" required>
-						<br>
-						<input type="text" class="form-control input-lg text-center" placeholder="Editorial" ng-model="newLibro.editorial" required>
-						<br>
-						<input type="text" class="form-control input-lg text-center" placeholder="Autor" ng-model="newLibro.autor" required>
-						<br>
 						<input type="text" class="form-control input-lg text-center" placeholder="Ranking" ng-model="newLibro.ranking" required>
 						<br>
-						<input type="text" class="form-control input-lg text-center" placeholder="Genero" ng-model="newLibro.genero" required>
-						<br>
-						<input type="text" class="form-control input-lg text-center" placeholder="Pagina" ng-model="newLibro.paginas" required>
 					</div>
 
 					<!-- Acciones que podemos realizar en el formulario -->
-					<button type="submit" class="btn btn-success btn-lg" ng-click="registrarLibro()" ng-disabled="myForm.$invalid || selected">Registrar</button>
 					<button type="submit" class="btn btn-warning btn-lg" ng-click="modificarLibro(newLibro)" ng-disabled="!newPersona.nombre || !newPersona.apellido || !newPersona.edad || !selected">Modificar</button>
-					<button type="submit" class="btn btn-danger btn-lg" ng-click="borrarPersona(newPersona)" ng-disabled="!newPersona.nombre || !newPersona.apellido || !newPersona.edad || !selected">Borrar</button>
 				</form>
 			</div>
 		</div>
