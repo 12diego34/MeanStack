@@ -26,14 +26,14 @@ exports.show = function(req, res, next) {
 exports.search = function (req, res, next) {
     if (req.method === "GET"){
         res.json({ resultados: [] });
-        //res.render('books/search', { title: 'Books', termino: '', resultados: [], busqueda: false });
+
     } else {
-        //console.log("Server: ",req);
+
         var termino = req.body.search_term;
         var options = {'limit': 40};
         books.search(termino, options, function(error, results) {
             if ( ! error )
-                //res.render('books/search', {title: 'Books', resultados: results, termino: termino, busqueda: true})
+
                 res.json({resultados: results});
         });
     }

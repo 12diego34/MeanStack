@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--aca hay que poner la ruta de la busqueda-->
-<html ng-app="MainApp">
+<html ng-app="bookSearchClient">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,12 @@
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/modernizr.js"></script>
-<script type="text/javascript" src="js/responsee.js"></script>   
+<script type="text/javascript" src="js/responsee.js"></script> 
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+       <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+        <script src="/js/client-app.js"></script>
+        <script src="/js/controllers.js"></script>
+
 </head>
 
 <!-- Aca hay que poner el controller de la busqueda
@@ -62,14 +67,37 @@
         <div id="first-block">
             <div class="line">
               <h2>Busca tu libro</h2>                 
-                <form class="navbar-form " role="search">
+                <div ng-controller="SearchBookController">
+                <form id="search-form", ng-submit="sendForm()">
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Busca tu libro..." id="query" name="query" value="">
+                    <input id='search_term', name='search_term', type='text', 
+                            placeholder='Ej.: El principito', ng-model="form.search_term", class="form-control custom-input", valor="form.search_term", required="">
                     <div class="input-group-btn">
                       <a href="/libros/buscar" class="btn btn-warning" role="button"><span class="glyphicon glyphicon-search"></span></a>
                     </div>
                   </div>
                 </form>                       
+
+</div>
+
+            
+            
+            <script 
+    
+        
+        $(".fav-btn").bind('click', function(){
+            var id = $(this).data('id');
+            $.ajax({
+                url: '/books/save/' + id,
+                type: 'post'
+            }).done(function(data){
+                console.log("succeed!");
+                window.location.assign('/');
+            }).fail(function(error){
+                console.log("error!", error.responseText);
+            });
+        });
+        ></script>
             </div>
          </div>
       </section>

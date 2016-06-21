@@ -2,6 +2,7 @@ var Libro = require('./modelo/libro');
 //var Persona = require('./modelo/persona');
 var Controller = require ('./controller');
 
+
 module.exports = function(app) {
 /*
 	// devolver todos los Personas
@@ -21,6 +22,7 @@ module.exports = function(app) {
 	app.get('/libro', function(req, res) {
 		res.sendfile('./angular/indexanterior.html'); // Carga única de la vista
 	});
+
 
 	app.get('/libros/buscar', function(req, res, next) {
  		res.render('books/search', { title: 'Buscar' });
