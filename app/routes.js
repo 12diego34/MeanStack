@@ -22,9 +22,9 @@ module.exports = function(app) {
 		res.sendfile('./angular/indexanterior.html'); // Carga única de la vista
 	});
 
-/*	router.get('/libros/buscar', function(req, res, next) {
+	app.get('/libros/buscar', function(req, res, next) {
  		res.render('books/search', { title: 'Buscar' });
-});*/
+});
 
 	app.get('/api/libro', Controller.getLibro);
 	app.post('/api/libro', Controller.setLibro);
